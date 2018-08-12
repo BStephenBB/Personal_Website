@@ -1,0 +1,44 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My personal website/portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
+  },
+  "keywords": [
+    "portfolio",
+    "personal",
+    "website",
+    "react"
+  ],
+  "author": "Stephen Brown-Bourne",
+  "license": "MIT",
+  "dependencies": {
+    "npm": "^6.3.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-anchor-link-smooth-scroll": "^1.0.10",
+    "react-dom": "^16.4.1",
+    "react-modal": "^3.5.1",
+    "react-onclickoutside": "^6.7.1",
+    "react-style": "^0.5.5",
+    "styled-components": "^3.3.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "svg-url-loader": "^2.3.2",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  }
+}

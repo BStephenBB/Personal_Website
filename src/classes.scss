@@ -1,0 +1,96 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+.hide {
+  @media only screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
+.panel-heading {
+  cursor: pointer;
+}
+.panel-collapse {
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+}
+.panel-body {
+  border: none !important;
+}
+.is-expanded:after {
+  content: "\2013";
+}
+
+.Modal {
+  position: absolute;
+  top: 6vh;
+  left: 25vw;
+  right: 25vw;
+  bottom: 6vh;
+  border-radius: 6px;
+  background-color: white;
+  outline: 0;
+  @media only screen and (max-width: 900px) {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalImage {
+  width: 100%;
+  height: auto;
+  border-radius: 6px 6px 0 0;
+}
+
+.ReactModal__Content {
+  opacity: 0;
+}
+
+.ReactModal__Content--after-open {
+  opacity: 1;
+  transition: opacity 250ms;
+}
+
+.ReactModal__Content--before-close {
+  opacity: 0;
+}
+
+modal__content {
+  position: "relative";
+  height: 500;
+}
+modal__header {
+  margin: 0;
+  padding: 20;
+  border-bottom: "1px solid #aaa";
+}
+modal__speaker {
+  color: "#aaa";
+  margin-left: 10;
+}
+modal__description {
+  padding: 20;
+}
+modal__toolbar {
+  padding: 20;
+  border-top: "1px solid #aaa";
+  position: "absolute";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: "right";
+}
