@@ -8,7 +8,10 @@ body {
     display: none;
   }
 }
-
+body {
+  background: url(/img/LizPreview.png) no-repeat -9999px url(/img/FortniteMapPreview.png)
+    no-repeat -9999px url(/img/DevLinkPreview.png) no-repeat -9999px;
+}
 .panel-heading {
   cursor: pointer;
 }
