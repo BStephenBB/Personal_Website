@@ -248,10 +248,10 @@ class Skills extends Component {
             </DiagramBtn>
           </Diagram1>
           <Description1>
-            <DescriptionTitle>Front End Development</DescriptionTitle>
+            <DescriptionTitle>Frontend Development</DescriptionTitle>
             <DescriptionText>
-              I have a deep understanding of core front end technologies, as and
-              experience with some of the most useful and powerful front end
+              I have a deep understanding of core frontend technologies, as and
+              experience with some of the most useful and powerful frontend
               libraries and frameworks. While I particularly enjoy React due to
               it's lightweight and performant nature, I'm always exploring and
               open to learning new technologies.
@@ -327,13 +327,13 @@ class Skills extends Component {
             </DiagramBtnAlt>
           </Diagram2>
           <Description2>
-            <DescriptionTitle>Back End Development</DescriptionTitle>
+            <DescriptionTitle>Backend Development</DescriptionTitle>
             <DescriptionText>
-              While I specialize in front end development, I also have a good
-              understanding of, and experience with back end development. I can
-              with creating and test APIs, protect routes/endpoints, manimpulate
+              While I specialize in frontend development, I also have a good
+              understanding of, and experience with backend development. I can
+              create and test APIs, protect routes/endpoints, manipulate
               relational and non-relational databases, and utilize middleware.
-              For secifics, see my skills!
+              For specifics, see my skills!
             </DescriptionText>
           </Description2>
 

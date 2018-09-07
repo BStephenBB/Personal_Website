@@ -243,6 +243,9 @@ const ModalTitle = styled.h1`
   font-family: ${props => props.theme.headerFont};
   font-size: 2rem;
   line-height: 2rem;
+  @media (max-height: 800px) {
+    padding: 0;
+  }
 `;
 const ModalDescription = styled.p`
   padding: 0;
@@ -251,6 +254,9 @@ const ModalDescription = styled.p`
   font-family: ${props => props.theme.bodyFont};
   font-size: 1rem;
   width: 95%;
+  @media (max-height: 800px) {
+    /* font-size: 0.9rem; */
+  }
 `;
 const SkillsUsed = styled.p`
   padding: 0;
