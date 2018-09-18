@@ -54,10 +54,11 @@ const Wrapper = styled.div`
 const WorkGrid = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: repeat(2, 47.5vh);
+  grid-template-rows: repeat(3, 47.5vh);
   max-width: 1150px;
   margin: 10vh auto 0 auto;
   @media (max-width: 500px) {
+    /* figure out what this does and adjust it for the new rows */
     grid-template-rows: 47.5vh 25vh;
   }
 `;
@@ -75,25 +76,23 @@ const projRad = "4px";
 
 const LeftContainer = ProjectContainer.extend`
   grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  grid-row: 2 / 3;
 
-  border-top-left-radius: ${projRad};
   @media (max-width: 1200px) {
     border-radius: 0;
   }
 `;
 const RightContainer = ProjectContainer.extend`
   grid-column: 2 / 3;
-  grid-row: 1 / 2;
+  grid-row: 2 / 3;
 
-  border-top-right-radius: ${projRad};
   @media (max-width: 1200px) {
     border-radius: 0;
   }
 `;
 const FullContainer = ProjectContainer.extend`
   grid-column: 1 / 3;
-  grid-row: 2 / 3;
+  grid-row: 3 / 4;
 
   border-bottom-left-radius: ${projRad};
   border-bottom-right-radius: ${projRad};
@@ -102,6 +101,68 @@ const FullContainer = ProjectContainer.extend`
     border-radius: 0;
   }
 `;
+const FullContainerTop = ProjectContainer.extend`
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+
+  border-top-left-radius: ${projRad};
+  border-top-right-radius: ${projRad};
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
+  @media (max-width: 1200px) {
+    border-radius: 0;
+  }
+`;
+// const WorkGrid = styled.div`
+//   display: grid;
+//   grid-template-columns: 50% 50%;
+//   grid-template-rows: repeat(2, 47.5vh);
+//   max-width: 1150px;
+//   margin: 10vh auto 0 auto;
+//   @media (max-width: 500px) {
+//     grid-template-rows: 47.5vh 25vh;
+//   }
+// `;
+
+// const ProjectContainer = styled.div`
+//   overflow: hidden;
+//   position: relative;
+//   width: 100%;
+//   height: 100%;
+//   cursor: pointer;
+//   text-align: left;
+// `;
+
+// const projRad = "4px";
+
+// const LeftContainer = ProjectContainer.extend`
+//   grid-column: 1 / 2;
+//   grid-row: 1 / 2;
+
+//   border-top-left-radius: ${projRad};
+//   @media (max-width: 1200px) {
+//     border-radius: 0;
+//   }
+// `;
+// const RightContainer = ProjectContainer.extend`
+//   grid-column: 2 / 3;
+//   grid-row: 1 / 2;
+
+//   border-top-right-radius: ${projRad};
+//   @media (max-width: 1200px) {
+//     border-radius: 0;
+//   }
+// `;
+// const FullContainer = ProjectContainer.extend`
+//   grid-column: 1 / 3;
+//   grid-row: 2 / 3;
+
+//   border-bottom-left-radius: ${projRad};
+//   border-bottom-right-radius: ${projRad};
+//   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
+//   @media (max-width: 1200px) {
+//     border-radius: 0;
+//   }
+// `;
 
 const InnerImg = styled.div`
   height: 100%;
@@ -125,6 +186,16 @@ const InnerImg2 = InnerImg.extend`
 const InnerImg3 = InnerImg.extend`
   background-image: url("../img/DevLink.png");
   ${FullContainer}:hover & {
+    transform: scale(1.05);
+  }
+  @media (max-width: 900px) {
+    background-image: none;
+    background-color: white;
+  }
+`;
+const InnerImg4 = InnerImg.extend`
+  background-image: url("../img/amtaf.png");
+  ${FullContainerTop}:hover & {
     transform: scale(1.05);
   }
   @media (max-width: 900px) {
@@ -162,6 +233,12 @@ const ProjectTitle3 = ProjectTitle.extend`
     transform: translate3d(0, -8px, 0);
   }
 `;
+const ProjectTitle4 = ProjectTitle.extend`
+  color: #fff;
+  ${FullContainerTop}:hover & {
+    transform: translate3d(0, -8px, 0);
+  }
+`;
 
 const ProjectDescription = styled.p`
   position: absolute;
@@ -188,6 +265,14 @@ const ProjectDescription3 = ProjectDescription.extend`
   width: 100%;
   text-align: center;
   ${FullContainer}:hover & {
+    transform: translate3d(0, 8px, 0) translateX(-50%);
+  }
+`;
+const ProjectDescription4 = ProjectDescription.extend`
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  ${FullContainerTop}:hover & {
     transform: translate3d(0, 8px, 0) translateX(-50%);
   }
 `;
@@ -222,6 +307,11 @@ const HoverBox2 = HoverBox.extend`
 `;
 const HoverBox3 = HoverBox.extend`
   ${FullContainer}:hover & {
+    transform: translate3d(0, 0, 0);
+  }
+`;
+const HoverBox4 = HoverBox.extend`
+  ${FullContainerTop}:hover & {
     transform: translate3d(0, 0, 0);
   }
 `;
@@ -314,6 +404,7 @@ class Work extends Component {
     this.showModal1 = this.showModal1.bind(this);
     this.showModal2 = this.showModal2.bind(this);
     this.showModal3 = this.showModal3.bind(this);
+    this.showModal4 = this.showModal4.bind(this);
   }
 
   handleOpenModal() {
@@ -342,7 +433,7 @@ class Work extends Component {
         "Researched, designed, developed, and deployed an interactive website that allows users to see various map objectives in Fortnite, an online multiplayer game. Coded with vanilla JavaScript.",
       image: "../img/FortniteMapPreview.png",
       skills:
-        "Skills & Tech used: UI / UX, HTML5, CSS/SCSS, CSS Animations & Transitions, JavaScript, git, GitHub, SSL",
+        "Skills & Tech used: UI/UX, HTML5, CSS/SCSS, CSS Animations & Transitions, JavaScript, git, GitHub, SSL",
       link: "https://fortnitemap.info/"
     });
   }
@@ -354,8 +445,20 @@ class Work extends Component {
         "Developed and deployed a full-stack networking web application for developers. Includes an extensive back-end API, state management, authentication, validation, protected routes, and a NoSQL database. Built with the MERN stack and used bootstrap for most of the UI and responsiveness.",
       image: "../img/DevLinkPreview.png",
       skills:
-        "Skills & Tech used: React, Redux, MongoDB, Mongoose, Express, Node, Bootstrap, JWT Authentication, Heroku, Axios, git, GitHub, Create React App",
+        "Skills & Tech used: React, Redux, MongoDB, Mongoose, Express, Node, Bootstrap, JWT Authentication, Heroku, Axios, git, GitHub",
       link: "https://hidden-ridge-32225.herokuapp.com/"
+    });
+  }
+  showModal4() {
+    this.setState({
+      showModal: true,
+      title: "AMTAF - A Means to a Frontend",
+      description:
+        "Designed and developed an interactive website that shows the definitions of different front-end technologies. Built with vanilla JavaScript and used Pug for templating.",
+      image: "../img/amtafPreview.png",
+      skills:
+        "Skills & Tech used: UI/UX, Pug, HTML5, CSS/SCSS, JavaScript, git, GitHub",
+      link: "https://bstephenbb.github.io/amtaf/"
     });
   }
 
@@ -403,6 +506,18 @@ class Work extends Component {
         </ReactModal>
 
         <WorkGrid>
+          <FullContainerTop onClick={this.showModal4}>
+            <InnerImg4 />
+            <ProjectTitle4>
+              AMTAF <span className="hide">- A Means to a Frontend</span>
+            </ProjectTitle4>
+            <ProjectDescription4>
+              Designed and developed a website that defines front-end
+              technologies
+            </ProjectDescription4>
+            <HoverBox4>View Project</HoverBox4>
+          </FullContainerTop>
+
           <LeftContainer onClick={this.showModal1}>
             <InnerImg1 />
             <ProjectTitle1>Liz Miao Website</ProjectTitle1>

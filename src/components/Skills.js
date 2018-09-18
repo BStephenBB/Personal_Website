@@ -286,7 +286,7 @@ class Skills extends Component {
                   </LI>
                   <LI>
                     <Check className={"far fa-check-circle"} />
-                    Webpack
+                    jQuery
                   </LI>
                 </UL>
               </SkillCol>
@@ -306,7 +306,7 @@ class Skills extends Component {
                 <UL>
                   <LI>
                     <Check className={"far fa-check-circle"} />
-                    jQuery
+                    Ajax / Axios / Fetch
                   </LI>
                   <LI>
                     <Check className={"far fa-check-circle"} />
@@ -331,7 +331,7 @@ class Skills extends Component {
             <DescriptionText>
               While I specialize in frontend development, I also have a good
               understanding of, and experience with backend development. I can
-              create and test APIs, protect routes/endpoints, manipulate
+              create and test RESTful APIs, protect routes/endpoints, manipulate
               relational and non-relational databases, and utilize middleware.
               For specifics, see my skills!
             </DescriptionText>
@@ -366,7 +366,7 @@ class Skills extends Component {
                   </LI>
                   <LI>
                     <Check className={"far fa-check-circle"} />
-                    Axios
+                    PostgreSQL
                   </LI>
                 </UL>
               </SkillCol>
@@ -390,7 +390,7 @@ class Skills extends Component {
                   </LI>
                   <LI>
                     <Check className={"far fa-check-circle"} />
-                    API Construction
+                    REST APIs
                   </LI>
                 </UL>
               </SkillCol>
@@ -445,7 +445,7 @@ class Skills extends Component {
                   </LI>
                   <LI>
                     <Check className={"far fa-check-circle"} />
-                    Axios
+                    Testing
                   </LI>
                 </UL>
               </SkillCol>
