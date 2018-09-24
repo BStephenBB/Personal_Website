@@ -58,8 +58,8 @@ const WorkGrid = styled.div`
   max-width: 1150px;
   margin: 10vh auto 0 auto;
   @media (max-width: 500px) {
-    /* figure out what this does and adjust it for the new rows */
-    grid-template-rows: 47.5vh 25vh;
+    /* to make the large grids the appropriate size once their picture goes away on smaller screens */
+    grid-template-rows: 25vh 47.5vh 25vh;
   }
 `;
 
@@ -112,58 +112,6 @@ const FullContainerTop = ProjectContainer.extend`
     border-radius: 0;
   }
 `;
-// const WorkGrid = styled.div`
-//   display: grid;
-//   grid-template-columns: 50% 50%;
-//   grid-template-rows: repeat(2, 47.5vh);
-//   max-width: 1150px;
-//   margin: 10vh auto 0 auto;
-//   @media (max-width: 500px) {
-//     grid-template-rows: 47.5vh 25vh;
-//   }
-// `;
-
-// const ProjectContainer = styled.div`
-//   overflow: hidden;
-//   position: relative;
-//   width: 100%;
-//   height: 100%;
-//   cursor: pointer;
-//   text-align: left;
-// `;
-
-// const projRad = "4px";
-
-// const LeftContainer = ProjectContainer.extend`
-//   grid-column: 1 / 2;
-//   grid-row: 1 / 2;
-
-//   border-top-left-radius: ${projRad};
-//   @media (max-width: 1200px) {
-//     border-radius: 0;
-//   }
-// `;
-// const RightContainer = ProjectContainer.extend`
-//   grid-column: 2 / 3;
-//   grid-row: 1 / 2;
-
-//   border-top-right-radius: ${projRad};
-//   @media (max-width: 1200px) {
-//     border-radius: 0;
-//   }
-// `;
-// const FullContainer = ProjectContainer.extend`
-//   grid-column: 1 / 3;
-//   grid-row: 2 / 3;
-
-//   border-bottom-left-radius: ${projRad};
-//   border-bottom-right-radius: ${projRad};
-//   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
-//   @media (max-width: 1200px) {
-//     border-radius: 0;
-//   }
-// `;
-
 const InnerImg = styled.div`
   height: 100%;
   width: 100%;
@@ -238,6 +186,9 @@ const ProjectTitle4 = ProjectTitle.extend`
   ${FullContainerTop}:hover & {
     transform: translate3d(0, -8px, 0);
   }
+  @media (max-width: 900px) {
+    color: ${props => props.theme.black};
+  }
 `;
 
 const ProjectDescription = styled.p`
@@ -274,6 +225,9 @@ const ProjectDescription4 = ProjectDescription.extend`
   text-align: center;
   ${FullContainerTop}:hover & {
     transform: translate3d(0, 8px, 0) translateX(-50%);
+  }
+  @media (max-width: 900px) {
+    color: ${props => props.theme.black};
   }
 `;
 
