@@ -26,14 +26,13 @@ const NavLogo = styled.img`
     cursor: initial;
   }
 `;
-const NavLink = styled.a`
+const NavStyle = styled.div`
   display: block;
   text-align: center;
   margin: 1rem;
   line-height: 3rem;
   color: black;
   height: 3rem;
-  text-decoration: none;
   font-size: 1.25rem;
   &:hover {
     color: ${props => props.theme.mainColor};
@@ -55,28 +54,28 @@ class Navbar extends Component {
         <List>
           <ListItem>
             <AnchorLink href="#contact" style={{ textDecoration: "none" }}>
-              <NavLink>Contact</NavLink>
+              <NavStyle>Contact</NavStyle>
             </AnchorLink>
           </ListItem>
           <ListItem>
             <AnchorLink href="#resume" style={{ textDecoration: "none" }}>
-              <NavLink>Resume</NavLink>
+              <NavStyle>Resume</NavStyle>
             </AnchorLink>
           </ListItem>
           <ListItem>
             <AnchorLink href="#projects" style={{ textDecoration: "none" }}>
-              <NavLink>Projects</NavLink>
+              <NavStyle>Projects</NavStyle>
             </AnchorLink>
           </ListItem>
           <ListItem>
             <AnchorLink href="#about" style={{ textDecoration: "none" }}>
-              <NavLink>About</NavLink>
+              <NavStyle>About</NavStyle>
             </AnchorLink>
           </ListItem>
           <LeftListItem>
-            <NavLink>
+            <NavStyle>
               <NavLogo src="../img/logo.svg" alt="logo" />
-            </NavLink>
+            </NavStyle>
           </LeftListItem>
         </List>
       </Wrapper>
