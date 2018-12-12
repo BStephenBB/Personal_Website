@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 const Wrapper = styled.div`
   background-color: ${props => props.theme.mainColor};
   padding-bottom: 54.4vh;
+  padding-top: 250px;
   @media (max-width: 500px) {
     padding-bottom: 20vh;
   }
