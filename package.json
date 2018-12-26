@@ -16,7 +16,7 @@
   "author": "Stephen Brown-Bourne",
   "license": "MIT",
   "dependencies": {
-    "npm": "^6.3.0",
+    "npm": "^6.5.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-anchor-link-smooth-scroll": "^1.0.10",
@@ -39,6 +39,6 @@
     "svg-url-loader": "^2.3.2",
     "webpack": "^4.16.2",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "webpack-dev-server": "^3.1.14"
   }
 }
